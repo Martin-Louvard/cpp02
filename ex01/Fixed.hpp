@@ -4,18 +4,18 @@
     class Fixed{
 
         public:
-        //defaut
         Fixed();
-        //copie
+        Fixed(int const number);
+        Fixed(float const number);
         Fixed(const Fixed& src);
-        //surchage operateur d'asignation
         Fixed & operator=(Fixed const & rhs);
-        //destructeur
         ~Fixed( void );
 
         int getRawBits( void ) const;
         void setRawBits( int const raw );
-
+        float toFloat( void ) const;
+        int toInt( void ) const;
+        
         private:
         
         int number;
